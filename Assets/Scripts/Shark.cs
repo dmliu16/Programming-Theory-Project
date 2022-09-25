@@ -16,5 +16,11 @@ class Shark : Fish
     void Update()
     {
         Swim(gameObject, speed);
+        Style();
+    }
+
+    protected override void Style()
+    {
+        gameObject.transform.Translate(new Vector3(0, 0, -1) * speed/2 * Time.deltaTime);
     }
 }
